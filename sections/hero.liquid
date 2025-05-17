@@ -1,0 +1,25 @@
+{%- liquid
+  echo 'hero.css' | asset_url | stylesheet_tag
+
+  render 'hero', title: section.settings.title
+-%}
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome to Our Store"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

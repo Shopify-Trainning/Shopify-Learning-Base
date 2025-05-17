@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      }
+    ]
+  },
+  {
+    "name": "Font",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "type_font",
+        "label": "Font",
+        "default": "assistant_n4"
+      }
+    ]
+  }
+]
