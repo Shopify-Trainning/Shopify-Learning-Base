@@ -1,0 +1,32 @@
+.casts {
+  text-align: center;
+  padding: 20px;
+}
+
+.casts__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.image__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.casts__image {
+  width: 20%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .casts__image {
+    width: 100%;
+    max-width: 300px;
+  }
+}

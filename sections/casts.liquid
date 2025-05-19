@@ -1,0 +1,38 @@
+{%- liquid
+  echo 'casts.css' | asset_url | stylesheet_tag
+
+  render 'casts', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Casts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "casts_title",
+      "label": "Casts title",
+      "default": "Casts"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "casts_image",
+      "name": "Casts Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "casts_image",
+          "label": "Casts Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Casts"
+    }
+  ]
+}
+{% endschema %}

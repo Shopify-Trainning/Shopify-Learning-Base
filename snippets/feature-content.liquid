@@ -1,0 +1,35 @@
+{%- liquid
+  assign title = settings.title
+  assign content_textarea = settings.content_textarea
+  echo 'feature-content.css' | asset_url | stylesheet_tag
+-%}
+
+<section class="feature__content">
+  <div class="feature__wrapper">
+    {%- if title != blank -%}
+      <h2 class="feature__title">
+        {{ title }}
+      </h2>
+    {%- endif -%}
+    {%- for mod_block in section.blocks -%}
+      {%- liquid
+        assign button_text = mod_block.settings.button_text
+        assign button_url = mod_block.settings.button_url
+      -%}
+      <div class="button__group">
+        {%- if button_text != blank -%}
+          {%- if button_url != blank -%}
+            <a href="{{button_url}}" class="feature__button">
+              {{ button_text }}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+    {%- if content_textarea != blank -%}
+      <p class="feature__textare">
+        {{ content_textarea }}
+      </p>
+    {%- endif -%}
+  </div>
+</section>

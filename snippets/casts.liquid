@@ -1,0 +1,29 @@
+{%- liquid
+  assign casts_title = settings.casts_title
+
+  echo 'casts.css' | asset_url | stylesheet_tag
+-%}
+
+<section class="casts">
+  <div class="casts__wrapper">
+    {%- if casts_title != blank -%}
+      <h3 class="casts__title">
+        {{ casts_title }}
+      </h3>
+      <div class="image__group">
+        {% for blocks in section.blocks %}
+          {% assign casts_image = blocks.settings.casts_image %}
+          {% if casts_image != blank %}
+            <img
+              src="{{casts_image |  image_url }}"
+              alt="{{casts_image.alt}}"
+              width=""
+              height=""
+              class="casts__image"
+            >
+          {% endif %}
+        {% endfor %}
+      </div>
+    {%- endif -%}
+  </div>
+</section>

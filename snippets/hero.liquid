@@ -1,3 +1,27 @@
-<section>
-  <h1>{{ title }}</h1>
-</section>
+{%- liquid
+  assign hero_image = settings.image
+  assign hero_title = settings.title
+  assign hero_content = settings.content
+  assign hero_button = settings.button_text
+  assign hero_url = settings.button_url
+  assign hero_alignment = settings.alignment
+
+  echo 'hero.css' | asset_url | stylesheet_tag
+-%}
+
+{%- if hero_image != blank -%}
+  <section class="hero hero--{{ hero_alignment }}">
+    <div class="hero__wrapper">
+      {%- if hero_title != blank -%}
+        <h1 class="hero__title">{{ hero_title }}</h1>
+      {%- endif -%}
+      {%- if hero_content != blank -%}
+        <p class="hero__content">{{ hero_content }}</p>
+      {%- endif -%}
+      {%- if hero_button != blank and hero_url != blank -%}
+        <a href="{{ hero_url }}" class="hero__button">{{ hero_button }}</a>
+      {%- endif -%}
+    </div>
+    <img src="{{ hero_image | image_url  }}" alt="{{ hero_image.alt }}" width="" height="" class="hero__image">
+  </section>
+{%- endif -%}
