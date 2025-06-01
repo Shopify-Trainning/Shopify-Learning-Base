@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+.hero__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 96px;
+}
+
 .hero--center {
   justify-content: center;
   text-align: center;

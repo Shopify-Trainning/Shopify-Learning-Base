@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>{{ page_title }}</title>
     {{ content_for_header }}
-    {{ 'style.css' | asset_url | stylesheet_tag }}
+    {%- liquid
+      render 'font-face'
+      echo 'style.css' | asset_url | stylesheet_tag
+   -%}
   </head>
   <body>
     {%- section 'header' -%}
