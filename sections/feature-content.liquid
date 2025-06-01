@@ -1,0 +1,50 @@
+{%- liquid
+  echo 'feature-content.css' | asset_url | stylesheet_tag
+
+  render 'feature-content', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Feature Content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": " Title",
+      "default": "Encanto"
+    },
+    {
+      "type": "textarea",
+      "id": "content_textarea",
+      "label": "Content"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Cartoon"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Feature Content"
+    }
+  ]
+}
+{% endschema %}
