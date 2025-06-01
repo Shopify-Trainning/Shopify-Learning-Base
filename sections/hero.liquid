@@ -1,7 +1,7 @@
 {%- liquid
   echo 'hero.css' | asset_url | stylesheet_tag
 
-  render 'hero', title: section.settings.title
+  render 'hero', settings: section.settings
 -%}
 
 {% schema %}
@@ -9,13 +9,53 @@
   "name": "Hero",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "Welcome to Our Store"
+      "default": "Encanto"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Watch Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     }
   ],
-  "blocks": [],
   "presets": [
     {
       "name": "Hero"
