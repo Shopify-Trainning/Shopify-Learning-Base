@@ -1,0 +1,38 @@
+{%- liquid
+  echo 'card-grid.css' | asset_url | stylesheet_tag
+
+  render 'card-grid', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Card Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "card-grid_title",
+      "label": "card-grid title",
+      "default": "Casts"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "card-grid_image",
+      "name": "Card Grid Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card-grid_image",
+          "label": "Card Grid Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card Grid"
+    }
+  ]
+}
+{% endschema %}

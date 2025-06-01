@@ -1,0 +1,29 @@
+{%- liquid
+  assign card-grid_title = settings['card-grid_title']
+
+  echo 'card-grid.css' | asset_url | stylesheet_tag
+-%}
+
+<section class="card-grid">
+  <div class="card-grid__wrapper">
+    {%- if card-grid_title != blank -%}
+      <h3 class="card-grid__title">
+        {{ card-grid_title }}
+      </h3>
+      <div class="card-grid__image__group">
+        {%- for block in section.blocks -%}
+          {%- assign card_image = block.settings['card-grid_image'] %}
+          {%- if card_image != blank -%}
+            <img
+              src="{{ card_image | image_url}}"
+              alt="{{ card_image.alt | escape }}"
+              width="{{ card_image.width }}"
+              height="{{ card_image.height }}"
+              class="card-grid__image"
+            >
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
