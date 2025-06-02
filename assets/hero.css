@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+<<<<<<< HEAD
+=======
+.hero__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 96px;
+}
+
+>>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
 .hero--center {
   justify-content: center;
   text-align: center;

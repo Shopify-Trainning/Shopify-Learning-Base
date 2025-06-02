@@ -1,10 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "hero"
+      "type": "hero",
+      "settings": {
+        "image": "shopify://shop_images/23c6f7c4d536c6385257fd5b81e810d53ff74780.jpg",
+        "title": "Encanto",
+        "content": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love.",
+        "button_text": "Watch Now",
+        "button_url": "#",
+        "alignment": "left"
+      }
+    },
+    "feature_content_XkFJnL": {
+      "type": "feature-content",
+      "blocks": {
+        "button_bDJkYd": {
+          "type": "button",
+          "settings": {
+            "button_text": "Cartoon",
+            "button_url": "#"
+          }
+        },
+        "button_JNhMk9": {
+          "type": "button",
+          "settings": {
+            "button_text": "Cartoon",
+            "button_url": "#"
+          }
+        },
+        "button_B74kmx": {
+          "type": "button",
+          "settings": {
+            "button_text": "Cartoon",
+            "button_url": "#"
+          }
+        },
+        "button_k9Yg99": {
+          "type": "button",
+          "settings": {
+            "button_text": "Cartoon",
+            "button_url": "#"
+          }
+        },
+        "button_AX3z6p": {
+          "type": "button",
+          "settings": {
+            "button_text": "Cartoon",
+            "button_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "button_bDJkYd",
+        "button_JNhMk9",
+        "button_B74kmx",
+        "button_k9Yg99",
+        "button_AX3z6p"
+      ],
+      "name": "Feature Content",
+      "settings": {
+        "title": "Encanto",
+        "content_textarea": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love."
+      }
+    },
+    "card_grid_FcYWQt": {
+      "type": "card-grid",
+      "blocks": {
+        "card_grid_image_PJHpKF": {
+          "type": "card-grid_image",
+          "settings": {
+            "card-grid_image": "shopify://shop_images/43a1c62eb9e32e3d0e52761f46a6eb013d7b165b.jpg"
+          }
+        },
+        "card_grid_image_AQi9KH": {
+          "type": "card-grid_image",
+          "settings": {
+            "card-grid_image": "shopify://shop_images/43a1c62eb9e32e3d0e52761f46a6eb013d7b165b.jpg"
+          }
+        },
+        "card_grid_image_ndmL96": {
+          "type": "card-grid_image",
+          "settings": {
+            "card-grid_image": "shopify://shop_images/43a1c62eb9e32e3d0e52761f46a6eb013d7b165b.jpg"
+          }
+        },
+        "card_grid_image_iLeX8d": {
+          "type": "card-grid_image",
+          "settings": {
+            "card-grid_image": "shopify://shop_images/43a1c62eb9e32e3d0e52761f46a6eb013d7b165b.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "card_grid_image_PJHpKF",
+        "card_grid_image_AQi9KH",
+        "card_grid_image_ndmL96",
+        "card_grid_image_iLeX8d"
+      ],
+      "name": "Card Grid",
+      "settings": {
+        "card-grid_title": "Casts"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "feature_content_XkFJnL",
+    "card_grid_FcYWQt"
   ]
 }
