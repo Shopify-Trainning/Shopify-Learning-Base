@@ -1,0 +1,48 @@
+{%- liquid
+  echo 'accordion.css' | asset_url | stylesheet_tag
+  echo 'accordion.js' | asset_url | script_tag
+
+  render 'accordion', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "accordion_title",
+      "label": "Accordion Title",
+      "default": "Privacy Statement"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_description",
+      "label": "Accordion Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_question",
+          "label": "Accordion Question"
+        },
+        {
+          "type": "textarea",
+          "id": "accordion_answer",
+          "label": "Accordion Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion"
+    }
+  ]
+}
+{% endschema %}
