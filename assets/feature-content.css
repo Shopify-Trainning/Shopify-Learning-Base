@@ -1,86 +1,83 @@
-.feature__title {
-<<<<<<< HEAD
-  color: white;
+.feature__wrapper {
+  display: block;
+  text-align: center;
+  max-width: 968px;
+  margin: 0 auto;
 }
-=======
+
+.feature__title {
   font-weight: 600;
   font-size: 48px;
   color: white;
 }
 
->>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
 .button__group {
   width: fit-content;
   display: inline-block;
   padding: 10px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
 .feature__button {
+  max-width: 968px;
+  margin: 0 auto;
   color: #7d6aff;
   display: inline-block;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 10px;
   line-height: 28px;
-  font-weight: 600;
   text-decoration: none;
   width: fit-content;
-  padding: 10px 36px;
+  padding: 10px 30px;
   text-align: center;
   border-radius: 50px;
   border: 2px solid #7d6aff;
   transition: background-color 300ms ease-in-out;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
 .feature__button:hover {
   color: white;
   background-color: #7d6aff;
 }
-<<<<<<< HEAD
-.feature__textare {
-  color: white;
-}
-
-@media screen and (min-width: 768px) {
-  .feature__content {
-    display: flex;
-    padding: 10px 200px;
-    justify-content: center;
-  }
-=======
-
 .feature__textarea {
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 28px;
+  text-align: justify;
   color: white;
+  max-width: 968px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .feature__content {
     display: flex;
     padding: 10px 200px;
-    background: red;
     justify-content: center;
   }
 
->>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
   .feature__wrapper {
     display: block;
     text-align: center;
   }
-<<<<<<< HEAD
-  .feature__textare {
-=======
 
   .feature__textarea {
->>>>>>> 154fbceeb399a2e6ef8ca5dc3a56f8a9cb111037
-    max-width: 968px;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     text-align: center;
     color: white;
+  }
+  .feature__button {
+    color: #7d6aff;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+    padding: 10px 36px;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid #7d6aff;
+    transition: background-color 300ms ease-in-out;
   }
 }
