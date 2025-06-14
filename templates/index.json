@@ -110,11 +110,48 @@
       "settings": {
         "card-grid_title": "Casts"
       }
+    },
+    "accordion_kAHMLA": {
+      "type": "accordion",
+      "blocks": {
+        "button_TQEPWe": {
+          "type": "button",
+          "settings": {
+            "accordion_question": "Question 1",
+            "accordion_answer": "As Emily struggles to fit in at home and at school,"
+          }
+        },
+        "button_T4Bejz": {
+          "type": "button",
+          "settings": {
+            "accordion_question": "Question 2",
+            "accordion_answer": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend."
+          }
+        },
+        "button_UeLLN7": {
+          "type": "button",
+          "settings": {
+            "accordion_question": "Question 3",
+            "accordion_answer": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love."
+          }
+        }
+      },
+      "block_order": [
+        "button_TQEPWe",
+        "button_T4Bejz",
+        "button_UeLLN7"
+      ],
+      "name": "Accordion",
+      "settings": {
+        "accordion_title": "Privacy Statement",
+        "accordion_description": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love."
+      }
     }
   },
   "order": [
     "main",
     "feature_content_XkFJnL",
-    "card_grid_FcYWQt"
+    "card_grid_FcYWQt",
+    "accordion_kAHMLA"
   ]
 }
