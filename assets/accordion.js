@@ -1,29 +1,42 @@
-document.addEventListener('DOMContentLoaded', function () {
+class AccordionCustom extends HTMLElement {
+  constructor() {
+    super();
 
+    this.isSingle = this.dataset.single === 'true';
+    this.accordions = this.querySelectorAll('.js-accordion-title');
+  }
 
-  const accordionHeaders = document.querySelectorAll('.accordion__header');
+  connectedCallback() {
+    this.handleClick();
+  }
 
-  accordionHeaders.forEach((accordion) => {
-    accordion.addEventListener('click', function () {
-      const activeAccordion = document.querySelector('.accordion__header.active');
+  closeAllItem() {
+    this.accordions.forEach((accordion) => {
+      const accordionParent = accordion.parentElement;
+      const accordionContent = accordion.nextElementSibling;
 
-      if (activeAccordion && activeAccordion !== accordion) {
-        activeAccordion.classList.remove('active');
-        const activeBody = activeAccordion.nextElementSibling;
-        if (activeBody) activeBody.style.maxHeight = 0;
-        activeAccordion.querySelector('.accordion__icon').textContent = '+';
-      }
-
-      accordion.classList.toggle('active');
-      const accordionBody = accordion.nextElementSibling;
-
-      if (accordion.classList.contains('active')) {
-        accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
-        accordion.querySelector('.accordion__icon').textContent = '−';
-      } else {
-        accordionBody.style.maxHeight = 0;
-        accordion.querySelector('.accordion__icon').textContent = '+';
-      }
+      accordionParent.removeAttribute('is-active');
+      accordionContent.style.maxHeight = 0;
     });
-  });
-});
+  }
+
+  handleClick() {
+    this.accordions.forEach((accordion) => {
+      accordion.addEventListener('click', () => {
+        if (this.isSingle) this.closeAllItem();
+
+        const accordionParent = accordion.parentElement;
+        const accordionContent = accordion.nextElementSibling;
+
+        accordionParent.toggleAttribute('is-active');
+        accordionContent.style.maxHeight = accordionParent.hasAttribute('is-active')
+          ? accordionContent.scrollHeight + 'px'
+          : 0;
+      });
+    });
+  }
+}
+
+if (!customElements.get('accordion-custom')) {
+  customElements.define('accordion-custom', AccordionCustom);
+}

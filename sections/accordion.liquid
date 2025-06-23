@@ -1,8 +1,9 @@
 {%- liquid
   echo 'accordion.css' | asset_url | stylesheet_tag
-  echo 'accordion.js' | asset_url | script_tag
 
   render 'accordion', settings: section.settings
+
+  echo 'accordion.js' | asset_url | script_tag
 -%}
 
 {% schema %}
