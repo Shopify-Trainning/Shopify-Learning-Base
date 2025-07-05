@@ -1,19 +1,32 @@
-<accordion-custom class="accordion" data-single="true">
-  {%- for block in section.blocks -%}
-    {%- liquid
-      assign accordion_question = block.settings.accordion_question
-      assign accordion_answer = block.settings.accordion_answer
-    -%}
-    {%- if accordion_question != blank -%}
-      <div class="accordion__item">
-        <div class="accordion__item-title js-accordion-title">
-          {{ accordion_question }}
-          <span class="accordion__item-icon">V</span>
+{%- liquid
+  assign accordion_title = settings.accordion_title
+  assign accordion_description = settings.accordion_description
+-%}
+
+<accordion-custom data-multiple="{{settings.accordion_multiple_mode}}">
+  <div class="accordion__title">
+    <h1>{{ accordion_title }}</h1>
+  </div>
+  <div class="accordion__description">
+    <p>{{ accordion_description }}</p>
+  </div>
+  <div class="accordion">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign accordion_question = block.settings.accordion_question
+        assign accordion_answer = block.settings.accordion_answer
+      -%}
+      {%- if accordion_question != blank -%}
+        <div class="accordion__item">
+          <div class="accordion__item-title js-accordion-title">
+            {{ accordion_question }}
+            <span class="accordion__item-icon">V</span>
+          </div>
+          <div class="accordion__item-content">
+            {{ accordion_answer }}
+          </div>
         </div>
-        <div class="accordion__item-content">
-          {{ accordion_answer }}
-        </div>
-      </div>
-    {%- endif -%}
-  {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
 </accordion-custom>

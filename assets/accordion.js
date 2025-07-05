@@ -1,13 +1,40 @@
 class AccordionCustom extends HTMLElement {
   constructor() {
     super();
-
-    this.isSingle = this.dataset.single === 'true';
     this.accordions = this.querySelectorAll('.js-accordion-title');
+    this.isMultiple = this.dataset.multiple === 'true';
   }
 
   connectedCallback() {
     this.handleClick();
+  }
+  setMultipleMode(isMultiple) {
+    this.isMultiple = isMultiple;
+  }
+
+  handleClick() {
+    this.accordions.forEach((accordion) => {
+      accordion.addEventListener('click', () => {
+        const accordionParent = accordion.parentElement;
+        const accordionContent = accordion.nextElementSibling;
+        const isCurrentlyOpen = accordionParent.hasAttribute('is-active');
+
+        // Nếu đang ở chế độ 1 mục & mục này đang mở → chỉ đóng nó
+        if (!this.isMultiple && isCurrentlyOpen) {
+          accordionParent.removeAttribute('is-active');
+          accordionContent.style.maxHeight = 0;
+          return;
+        }
+
+        // Nếu đang ở chế độ 1 mục & mục này chưa mở → đóng hết rồi mở
+        if (!this.isMultiple) this.closeAllItem();
+
+        accordionParent.toggleAttribute('is-active');
+        accordionContent.style.maxHeight = accordionParent.hasAttribute('is-active')
+          ? accordionContent.scrollHeight + 'px'
+          : 0;
+      });
+    });
   }
 
   closeAllItem() {
@@ -17,22 +44,6 @@ class AccordionCustom extends HTMLElement {
 
       accordionParent.removeAttribute('is-active');
       accordionContent.style.maxHeight = 0;
-    });
-  }
-
-  handleClick() {
-    this.accordions.forEach((accordion) => {
-      accordion.addEventListener('click', () => {
-        if (this.isSingle) this.closeAllItem();
-
-        const accordionParent = accordion.parentElement;
-        const accordionContent = accordion.nextElementSibling;
-
-        accordionParent.toggleAttribute('is-active');
-        accordionContent.style.maxHeight = accordionParent.hasAttribute('is-active')
-          ? accordionContent.scrollHeight + 'px'
-          : 0;
-      });
     });
   }
 }
