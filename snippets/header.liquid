@@ -1,0 +1,44 @@
+{%- liquid
+  assign logo_image = settings.logo_image
+-%}
+
+<header class="header">
+  <div>
+    {% if logo_image != blank %}
+      <img
+        src="{{ logo_image | image_url}}"
+        alt="{{ logo_image.alt | escape }}"
+        width=""
+        height=""
+        class="logo_image"
+      >
+    {% endif %}
+  </div>
+  <div class="header__navigation">
+    {% for link in linklists['main-menu'].links -%}
+      {{ link.title | link_to: link.url, class: 'header__link' }}
+    {%- endfor %}
+  </div>
+  <div class="header__buttons">
+    {%- for mod_block in section.blocks -%}
+      {%- liquid
+        assign button_text = mod_block.settings.button_text
+        assign button_url = mod_block.settings.button_url
+      -%}
+      <div
+        class="header__button"
+        style="
+          --header-button-bg_color: {{ mod_block.settings.background_color }};
+          --header-button-txt_color: {{ mod_block.settings.text_color }};
+          --header-button-border_color: {{ mod_block.settings.border_color }};
+        "
+      >
+        {%- if button_text and button_url -%}
+          <a href="{{ button_url | escape }}" class="button__url">
+            {{ button_text | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</header>

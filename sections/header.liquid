@@ -1,3 +1,59 @@
-<header>
-  {{ shop.name }}
-</header>
+{%- liquid
+  echo 'header.css' | asset_url | stylesheet_tag
+  render 'header', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "label": "Enable Search"
+    }
+  ],
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "BackGround Color",
+          "default": "#191A2E"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color",
+          "default": "#7d6aff"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

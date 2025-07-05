@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e0e1f;
+}
+
+.logo_image {
+  height: 50px;
+  width: fit-content;
+}
+
+.header__navigation {
+  display: flex;
+  gap: 10px;
+  margin-left: 100px;
+}
+.header__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.header__buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header__button {
+  background-color: var(--header-button-bg_color);
+  border: 2px solid var(--header-button-border_color);
+  color: var(--header-button-txt_color);
+  padding: 8px 10px;
+  border-radius: 6px;
+  width: fit-content;
+  transition: background-color 300ms ease-in-out;
+}
+
+.button__url {
+  color: var(--header-button-txt_color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.header__button:hover {
+  background-color: #7d6aff;
+}
+.header__link:active {
+  color: yellow;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e1f;
+  }
+
+  .logo_image {
+    height: 50px;
+    width: fit-content;
+  }
+
+  .header__navigation {
+    display: flex;
+    gap: 10px;
+    margin-left: 100px;
+  }
+  .header__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .header__buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .header__button {
+    background-color: var(--header-button-bg_color);
+    border: 2px solid var(--header-button-border_color);
+    color: var(--header-button-txt_color);
+    padding: 8px 16px;
+    border-radius: 6px;
+    width: fit-content;
+    transition: background-color 300ms ease-in-out;
+  }
+
+  .button__url {
+    color: var(--header-button-txt_color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+  }
+}
