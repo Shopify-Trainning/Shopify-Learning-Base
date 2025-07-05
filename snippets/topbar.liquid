@@ -1,0 +1,20 @@
+{% liquid
+  assign topbar_text = settings.topbar_text
+  assign topbar_url = settings.topbar_url
+%}
+
+<section
+  class="topbar"
+  style="
+    --topbar-bg_color: {{settings.background_color}};
+    --topbar-txt_color: {{settings.text_color}}
+  "
+>
+  <div class="topbar__content">
+    {% if topbar_text != blank %}
+      <a href="{{topbar_url}}" class="topbar__url">
+        <p class="topbar__text">{{ topbar_text }}</p>
+      </a>
+    {% endif %}
+  </div>
+</section>

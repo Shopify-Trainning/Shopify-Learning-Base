@@ -1,0 +1,40 @@
+{%- liquid
+  echo 'topbar.css' | asset_url | stylesheet_tag
+  render 'topbar', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "TopBar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "topbar_text",
+      "label": "TopBar Text",
+      "default": "Welcome to my Store"
+    },
+    {
+      "type": "url",
+      "id": "topbar_url",
+      "label": "TopBar Link"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "BackGround Color",
+      "default": "#191A2E"
+    }
+  ],
+  "presets": [
+    {
+      "name": "TopBar"
+    }
+  ]
+}
+{% endschema %}
