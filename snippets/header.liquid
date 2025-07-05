@@ -1,5 +1,6 @@
 {%- liquid
   assign logo_image = settings.logo_image
+  assign header_menu = settings.header_menu
 -%}
 
 <header class="header">
@@ -15,7 +16,7 @@
     {% endif %}
   </div>
   <div class="header__navigation">
-    {% for link in linklists['main-menu'].links -%}
+    {% for link in linklists[header_menu].links -%}
       {{ link.title | link_to: link.url, class: 'header__link' }}
     {%- endfor %}
   </div>
