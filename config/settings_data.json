@@ -8,6 +8,56 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {},
+  "current": {
+    "sections": {
+      "topbar": {
+        "type": "topbar",
+        "settings": {
+          "topbar_text": "Welcome to my Store",
+          "topbar_url": "",
+          "text_color": "#ffffff",
+          "background_color": "#191a2e"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "button_gjGRep": {
+            "type": "button",
+            "settings": {
+              "button_text": "Login",
+              "button_url": "#",
+              "text_color": "#ffffff",
+              "background_color": "#191a2e",
+              "border_color": "#7d6aff"
+            }
+          },
+          "button_LmzEKy": {
+            "type": "button",
+            "settings": {
+              "button_text": "Sign Up",
+              "button_url": "#",
+              "text_color": "#ffffff",
+              "background_color": "#7d6aff",
+              "border_color": "#7d6aff"
+            }
+          }
+        },
+        "block_order": [
+          "button_gjGRep",
+          "button_LmzEKy"
+        ],
+        "settings": {
+          "logo_image": "shopify://shop_images/Encanto-Logo-768x432.png",
+          "enable_search": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
+    },
+    "content_for_index": []
+  },
   "presets": {}
 }
