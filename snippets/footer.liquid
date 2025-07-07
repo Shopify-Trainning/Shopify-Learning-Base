@@ -1,0 +1,48 @@
+{%- liquid
+  assign footer_paragraph = settings.footer_paragraph
+  assign checkbox_text = settings.checkbox_text
+-%}
+
+<footer-custom class="footer">
+  {%- for link in linklists.footer.links -%}
+    <div>
+      <h3>{{ link.title }}</h3>
+      {%- if link.links != blank -%}
+        <ul>
+          {%- for sublink in link.links -%}
+            <li>{{ sublink.title | link_to: sublink.url }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+  <div class="footer__store-info">
+    <h3>INFO</h3>
+    <ul>
+      <li>
+        {{ shop.name }}
+      </li>
+      <li>
+        {{ shop.address.address1 }}
+      </li>
+      <li>
+        <a href="tel:{{shop.phone}}">{{ shop.phone }}</a>
+      </li>
+      <li>
+        <a href="mailto:{{shop.email}}">{{ shop.email }}</a>
+      </li>
+    </ul>
+  </div>
+  {%- if footer_paragraph != blank -%}
+    <div class="footer__email-form">
+      <p>{{ footer_paragraph }}</p>
+      <form action="">
+        <label for="email">Email Address</label>
+        <input type="email" required>
+        <input type="checkbox" id="myCheckbox" class="footer__checkbox js-footer-checkbox">
+        <span>{{ checkbox_text }}</span>
+        <button id="myButton" class="footer__button js-footer-button" disabled>Subcribe</button>
+      </form>
+    </div>
+  {%- endif -%}
+</footer-custom>

@@ -1,3 +1,29 @@
-<footer>
-  {{ powered_by_link }}
-</footer>
+{%- liquid
+  echo 'footer.css' | asset_url | stylesheet_tag
+  render 'footer', settings: section.settings
+
+  echo 'footer.js' |asset_url | script_tag
+-%}
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Menu",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "footer_paragraph",
+      "label": "Email form text"
+    },
+    {
+      "type": "text",
+      "id": "checkbox_text",
+      "label": "Checkbox text"
+    }
+  ]
+}
+{% endschema %}
