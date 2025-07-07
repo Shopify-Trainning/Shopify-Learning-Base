@@ -1,14 +1,13 @@
 {%- liquid
   assign casts_title = settings.casts_title
-
 -%}
 
 <section class="casts">
   <div class="casts__wrapper">
     {%- if casts_title != blank -%}
-      <h3 class="casts__title">
+      <h2 class="casts__title">
         {{ casts_title }}
-      </h3>
+      </h2>
       <div class="image__group">
         {% for blocks in section.blocks %}
           {% assign casts_image = blocks.settings.casts_image %}
