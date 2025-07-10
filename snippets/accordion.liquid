@@ -4,12 +4,14 @@
 -%}
 
 <accordion-custom data-multiple="{{settings.accordion_multiple_mode}}">
-  <div class="accordion__title">
-    <h2>{{ accordion_title }}</h2>
-  </div>
-  <div class="accordion__description">
-    <p>{{ accordion_description }}</p>
-  </div>
+  {%- if accordion_title != blank -%}
+   <div class="accordion__header">
+     <h2 class="accordion__title">{{ accordion_title }}</h2>
+    {%- if accordion_description != blank -%}
+      <p class="accordion__description">{{ accordion_description }}</p>
+    {%- endif -%}
+   </div>
+  {%- endif -%}
   <div class="accordion">
     {%- for block in section.blocks -%}
       {%- liquid
