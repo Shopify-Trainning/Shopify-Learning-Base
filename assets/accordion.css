@@ -6,7 +6,7 @@
   width: 100%;
 }
 .accordion__header {
-  padding: 10px 200px;
+  padding: 0;
 }
 .accordion__item {
   border-bottom: 2px solid white;
@@ -37,11 +37,9 @@
 }
 .accordion__title {
   text-align: center;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  margin-bottom: 20px;
-  color: #ffffff;
+  font-weight: 600;
+  font-size: 40px;
+  color: white;
 }
 
 .accordion__description {
@@ -62,7 +60,11 @@
     color: #ffffff;
     width: 50%;
   }
+  .accordion__header {
+    padding: 10px 200px;
+  }
   .accordion__title {
+    text-align: center;
     color: white;
     font-weight: 600;
     font-size: 36px;
