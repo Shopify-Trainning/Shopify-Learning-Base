@@ -16,7 +16,7 @@
 .header__navigation {
   display: flex;
   gap: 10px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 .header__link {
   text-decoration: none;
