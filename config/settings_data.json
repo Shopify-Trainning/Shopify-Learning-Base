@@ -49,12 +49,16 @@
         ],
         "settings": {
           "logo_image": "shopify://shop_images/Encanto-Logo-768x432.png",
-          "enable_search": false
+          "header_menu": "main-menu"
         }
       },
       "footer": {
         "type": "footer",
-        "settings": {}
+        "settings": {
+          "footer_menu": "footer",
+          "footer_paragraph": "Sign up to receive 10% off your first full price order and be the first to hear about the latest drops and offers about The Aje Collective.",
+          "checkbox_text": "By signing up you confirm that you have read and accepted our Website Terms and Conditions and Privacy Policy."
+        }
       }
     },
     "content_for_index": []
