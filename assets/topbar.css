@@ -2,7 +2,8 @@
   background-color: var(--topbar-bg_color);
   color: var(--topbar-txt_color);
   margin: 0;
-  padding: 16px 32px;
+  padding: 0;
+  font-size: 15px;
 }
 .topbar__url {
   color: inherit;
@@ -18,7 +19,7 @@
     background-color: var(--topbar-bg_color);
     color: var(--topbar-txt_color);
     margin: 0;
-    padding: 16px 32px;
+    font-size: 20px;
   }
   .topbar__url {
     color: inherit;
