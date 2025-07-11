@@ -1,0 +1,64 @@
+{%- liquid
+  render 'hero-carousel', settings: section.settings
+-%}
+
+{% schema %}
+{
+  "name": "Hero Carousel",
+  "blocks": [
+    {
+      "type": "hero_carousel",
+      "name": "Hero Carousel",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "carousel_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Encanto"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Watch Now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Carousel"
+    }
+  ]
+}
+{% endschema %}

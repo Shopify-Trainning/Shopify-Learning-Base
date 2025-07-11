@@ -1,0 +1,33 @@
+{%- liquid
+  echo 'hero-carousel.css' | asset_url | stylesheet_tag
+-%}
+
+<section class="carousel">
+  {% for block in section.blocks %}
+    {%- assign carousel_image = block.settings.carousel_image -%}
+    {%- assign carousel_title = block.settings.title -%}
+    {%- assign carousel_button = block.settings.button_text -%}
+    {%- assign carousel_url = block.settings.button_url -%}
+    {%- assign carousel_alignment = block.settings.alignment -%}
+
+    {%- if carousel_image != blank -%}
+      <div class="carousel__slide carousel__slide--{{ carousel_alignment }}">
+        <div class="carousel__wrapper">
+          {%- if carousel_title != blank -%}
+            <h1 class="carousel__title">{{ carousel_title }}</h1>
+          {%- endif -%}
+          {%- if carousel_button != blank and carousel_url != blank -%}
+            <a href="{{ carousel_url }}" class="carousel__button">{{ carousel_button }}</a>
+          {%- endif -%}
+        </div>
+        <img
+          src="{{ carousel_image | image_url }}"
+          width=""
+          height=""
+          alt="{{ carousel_image.alt }}"
+          class="carousel__image"
+        >
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</section>
