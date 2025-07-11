@@ -9,8 +9,29 @@
  */
 {
   "sections": {
+    "hero_carousel_8pmCpx": {
+      "type": "hero-carousel",
+      "blocks": {
+        "hero_carousel_UhCfAm": {
+          "type": "hero_carousel",
+          "settings": {
+            "carousel_image": "shopify://shop_images/430180d8-63ae-4190-bc0d-3a66204a3c26.jpg",
+            "title": "Encanto",
+            "button_text": "Watch Now",
+            "button_url": "#",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "hero_carousel_UhCfAm"
+      ],
+      "name": "Hero Carousel",
+      "settings": {}
+    },
     "main": {
       "type": "hero",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/23c6f7c4d536c6385257fd5b81e810d53ff74780.jpg",
         "title": "Encanto",
@@ -143,12 +164,14 @@
       ],
       "name": "Accordion",
       "settings": {
+        "accordion_multiple_mode": false,
         "accordion_title": "Privacy Statement",
         "accordion_description": "As Emily struggles to fit in at home and at school, she discovers a small red puppy who is destined to become her best friend. When Clifford magically undergoes one heck of a growth spurt, becomes a gigantic dog and attracts the attention of a genetics company, Emily and her Uncle Casey have to fight the forces of greed as they go on the run across New York City. Along the way, Clifford affects the lives of everyone around him and teaches Emily and her uncle the true meaning of acceptance and unconditional love."
       }
     }
   },
   "order": [
+    "hero_carousel_8pmCpx",
     "main",
     "feature_content_XkFJnL",
     "card_grid_FcYWQt",
